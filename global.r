@@ -6,7 +6,7 @@ library(DT)
 library(googleVis)
 library(stringr)
 library(maps)
-
+library(mapproj)
 data = read.csv('./data/pythondevsurvey2017_raw_data.csv', header=TRUE)
 colnames(data)
 colnames(data)[161] = "Age"
@@ -131,7 +131,7 @@ age$number
 
 
 c = data %>% select(., country = 162)
-Country = c %>% group_by(., country) %>% summarise(number = length(country)) %>% arrange(., desc(number))
+Country = c %>% group_by(., country) %>% summarise(number = length(country)) %>% arrange(., desc(number)) %>% head(15)
 Country
 WorldData <- map_data('world')
 WorldData %>% filter(region != "Antarctica") -> WorldData

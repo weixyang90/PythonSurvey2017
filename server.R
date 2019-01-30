@@ -120,6 +120,7 @@ shinyServer(function(input, output){
             text = element_text(size=20), 
             plot.title = element_text(hjust = 0.5))+
       expand_limits(x = WorldData$long, y = WorldData$lat)
+   
   )
   
   output$Country2 <- renderPlot(

@@ -47,7 +47,7 @@ shinyUI(dashboardPage(
       tabItem(tabName = "Age",
               fluidRow(column(5,plotOutput("Age")), column(7,plotOutput("Age2")))),
       tabItem(tabName = "Country",
-              fluidRow(column(12,plotOutput("Country"), style = "height : 400px")),
+              fluidRow(column(12,plotOutput("Country"))),
               hr(),
               fluidRow(column(12,plotOutput("Country2"))))
     )
